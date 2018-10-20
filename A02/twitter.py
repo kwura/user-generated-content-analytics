@@ -18,7 +18,8 @@ non_bmp_map = dict.fromkeys(range(0x10000, sys.maxunicode + 1), 0xfffd)
 #file names - commented out file names have already been used
 #file_name = 'tweets.csv'
 #file_name = 'tweets2.csv'
-file_name = 'tweets3.csv'
+#file_name = 'tweets3.csv'
+file_name = 'tweets4.csv'
 
 out_file = open('/Users/barrettpoth/Google Drive/School/MIS 381N - User Generated Content Analytics/Assignments/02 - Twitter/' + file_name, "w")
 writer = csv.writer(out_file)
@@ -26,7 +27,8 @@ writer.writerow(["id", "location", "text"])
 
 # queries - commented out queries have already been used
 # query = 'Texas Senate Race'
-query = 'texas senate'
+#query = 'texas senate'
+query = '#Texas Senate Race'
 
 all_tweets = tweepy.Cursor(api.search, q=query).items()
 
